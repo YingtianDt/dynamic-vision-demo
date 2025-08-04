@@ -1,68 +1,476 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Project Demo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f5f5f5;
-      color: #333;
-      padding: 2rem;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      line-height: 1.6;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background: #007acc;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    a.button:hover {
-      background: #005fa3;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      margin-top: 1rem;
-      border-radius: 6px;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="keywords" content="Many-Two-One: Diverse Representations Across Visual Pathways Emerge from A Single Objective">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Many-Two-One</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.16.0/gradio.js"></script>
 </head>
+
+<style>
+</style>
 <body>
-  <div class="container">
-    <h1>🌟 My Project Title</h1>
-    <p>
-      This is a brief description of your project — what it does, how it works, and why it matters.
-    </p>
+  
 
-    <h2>🔗 Live Demo</h2>
-    <!-- Replace this with your real demo URL -->
-    <iframe src="https://your-demo-url.com"></iframe>
+  <!-- title part -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div style="display: flex; align-items: center; justify-content: center;">
+              <!-- title -->
+              <h1 class="title is-1 publication-title">Many-Two-One</h1>
+            </div>
+            <h2><b>Diverse Representations Across Visual Pathways Emerge from A Single Objective</b></h2>
+            <div class="is-size-5">
+              <!-- authors -->
+              <span class="author-block">
+                <a href="https://yingtiandt.github.io/" target="_blank"><b>Yingtian Tang</b></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://akgokce.github.io/" target="_blank"><b>Abdulkadir Gokce</b></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/khaled-jedoui-2a684b216/" target="_blank"><b>Khaled Jedoui</b></a>,
+              </span>
+              <!-- <span class="author-block">
+                <a href="https://bkhmsi.github.io/" target="_blank"><b>Badr AlKhamissi</b></a>,
+              </span> -->
+              <!-- <br> -->
+              <br>
+              <span class="author-block">
+                <a href="https://stanford.edu/~yamins/" target="_blank" style="font-weight:normal;"><b>Daniel Yamins</b></a>,
+              </span>
+              <span class="author-block">
+                <a href="https://mschrimpf.com" target="_blank" style="font-weight:normal;"><b>Martin Schrimpf</b></a>
+              </span>
+            </div>
 
-    <h2>📂 GitHub Repository</h2>
-    <a class="button" href="https://github.com/your-username/your-repo" target="_blank">View on GitHub</a>
-  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><b style="color:red">EPFL</b></span>
+              <span class="author-block" style="width: 10px;"></span>
+              <span class="author-block"><b style="color:#9a0000;font-family: 'Times New Roman', Times, serif;">Stanford</b></span>
+            </div>
+
+            <!-- 
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>*</sup>Equal Supervision</span>
+            </div> -->
+
+            <!-- links -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://www.biorxiv.org/content/10.1101/2025.07.22.664908v1" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-biorxiv"></i>
+                    </span>
+                    <span>bioRxiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/epflneuroailab/dynamic-vision" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/brain-score/vision/tree/master/brainscore_vision/models" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="images/common/brainscore-logo.png" style="width: 20px; height: 20px;">
+                    </span>
+                    <span>Models</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+
+            <!-- <div class="is-size-5 publication-authors">
+              <span class="author-block" style="color:red;"><b></b></span>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract part -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body" style="display: flex; justify-content: center;">
+        <img src="images/demo-overview.svg"/>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- data part -->
+  <section class="section" style="background-color:#efeff081">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              How the human brain supports diverse behaviours has been debated for decades. The canonical view divides visual processing into distinct "what" and "where/how" streams  however, their origin and independence remain contested. Here, using deep neural network models that accurately predict hours of brain recordings, we computationally characterise how cortex processes dynamic vision. Despite the diversity of cortical regions and thereby supported tasks, we identify two fundamental computations that explain neural activity across visual cortex: object and appearance-free motion recognition. 
+              Strikingly, <strong><i>a single objective</i></strong> underlies both: these inherent computations in the brain emerge from optimising for understanding world dynamics, and their arrangement is highly distributed and smooth across cortex rather than strictly aligning with the two visual streams. Our results suggest that the human brain's ability to integrate complex information across seemingly distinct representational pathways may originate from the single goal of modelling the world.
+           </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Functional Objective of the Brain -->
+  <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Functional Objective of the Brain</h2>
+      </div>
+    </div>
+  
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <div class="text-center mt-5">
+              <img id="pipeline_framework" width="100%" src="images/demo-motivate.svg">
+            </div>
+            <!-- <p style="text-align:center; font-style: italic; font-size: small;">
+              Fedorenko, E., Ivanova, A.A. & Regev, T.I. The language network as a natural kind within the broader landscape of the human brain. Nat. Rev. Neurosci. 25, 289-312 (2024). 
+            </p> -->
+            <p></p>
+            <div class="methodology-section">
+              <em>How do we understand the computations in the brain?</em> One way is through building hypothesis models that encode specific computational mechanisms, and evaluate how well their stimulus-response patterns align with those of real neural circuits.
+              Task-driven approaches have recently proven effective for modeling brain function. For example, image classification as an objective yields deep networks whose representations closely match activity in the ventral visual stream.
+              In a <em>multitask</em> setting, the brain may contain distinct <em>“processing pathways”</em> for different tasks. A model that excels at task <strong>A</strong> likely shares representations with the neural pathway specialized for <strong>A</strong>.
+              Moreover, a neuron may support multiple tasks (<strong>A</strong>&<strong>B</strong>), requiring alignment with models optimized for multitask computation.
+              In our work, we first find brain-aligned models, and characterize the tasks supported by their representations, thereby inferring the visual system’s functional objectives.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  </section>
+
+  <!-- Brain-Model Alignment -->
+  <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Brain-Model Alignment</h2>
+      </div>
+    </div>
+  
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <div class="text-center mt-5">
+              <img id="pipeline_framework" width="90%" src="images/demo-model-brain.png">
+            </div>
+            <!-- <p style="text-align:center; font-style: italic; font-size: small;">
+              Fedorenko, E., Ivanova, A.A. & Regev, T.I. The language network as a natural kind within the broader landscape of the human brain. Nat. Rev. Neurosci. 25, 289-312 (2024). 
+            </p> -->
+            <p></p>
+            <div class="methodology-section">
+              We begin by assessing how closely current deep neural networks resemble the brain, using both neural and behavioral alignment. 
+              <strong>For neural alignment</strong>, we measure linear decoding performance from DNN representations to fMRI responses during video viewing. 
+              <strong>For behavioral alignment</strong>, we compare model and human error patterns on action recognition tasks under varying presentation conditions.
+            </div>
+            <div class="text-center mt-5">
+              <img id="pipeline_framework" width="90%" src="images/demo-model-results.svg">
+            </div>
+            <p></p>
+            <div class="methodology-section">
+              Across all model families, we find that <em>dynamic models</em> achieve state-of-the-art alignment with visual cortex activity and behavioral responses, outperforming both static and traditional models. They accurately <strong>predict neural activity</strong> on a second-by-second basis.
+              Meanwhile, many dynamic models closely <strong>mirror human error patterns</strong>, with several approaching the level of inter-subject consistency observed among human participants.
+              Several dynamic families yield models with high neural alignment, while action recognition models have an advantage in behavioral alignment.
+              <em>What drives the superior alignment of these dynamic models?</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  </section>
+  
+
+  <!-- Brain-Task Relevance -->
+  <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Brain-Task Relevance</h2>
+      </div>
+    </div>
+  
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <div class="text-center mt-5">
+              <img id="pipeline_framework" width="100%" src="images/demo-task-brain.svg">
+            </div>
+            <!-- <p style="text-align:center; font-style: italic; font-size: small;">
+              Fedorenko, E., Ivanova, A.A. & Regev, T.I. The language network as a natural kind within the broader landscape of the human brain. Nat. Rev. Neurosci. 25, 289-312 (2024). 
+            </p> -->
+            <p></p>
+            <div class="methodology-section">
+              To understand what drives brain alignment, we <strong>decode</strong> the top layers of DNNs to identify which cognitive tasks their representations support. We use a diverse set of tasks—static, dynamic, and hybrid—annotated in blue, red, and yellow, respectively, to pinpoint the role of dynamic processing.
+              We then correlate task performance with brain alignment: stronger correlations suggest that the corresponding task is more closely tied to the brain's underlying functional objective.
+              Hybrid tasks generally show higher relevance to brain alignment. Notably, the combination of <strong>purely static object recognition</strong> and <strong>purely dynamic motion recognition</strong> yields the highest alignment—and together, they explain away the explanatory power of all other tasks.
+            </div>
+            <div class="text-center mt-5">
+              <img id="pipeline_framework" width="90%" src="images/demo-task-distribute.svg">
+            </div>
+            <p></p>
+            <div class="methodology-section">
+              <em>Are these two computations fundamental to the brain?</em>
+              Indeed, brain alignment increases as both object and motion capacities improve (upper-left). Moreover, dimensionality reduction on voxel-wise task relevances (upper-right) reveals a 2D eigenspace that explains 97% of the variance, with two principal axes emerging: object form and motion dynamics.
+              We see several regions actually conduct hybrid computations, with voxels spreading between the two axes.
+              Further analysis at the region and stream levels (bottom) shows that they account for most of the variance across regions and explain every visual stream. Again, it also highlights the <strong>highly hybrid and distributed nature</strong> of computations within individual streams.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  </section>
+  
+
+  <!-- Evidence of a Unified Objective -->
+  <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Evidence for a Unified Objective</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Evidence from Task Mapping</h3>
+      </div>
+    </div>
+  
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <div class="text-center mt-5">
+              <img id="pipeline_framework" width="100%" src="images/demo-evidence-task.svg">
+            </div>
+            <!-- <p style="text-align:center; font-style: italic; font-size: small;">
+              Fedorenko, E., Ivanova, A.A. & Regev, T.I. The language network as a natural kind within the broader landscape of the human brain. Nat. Rev. Neurosci. 25, 289-312 (2024). 
+            </p> -->
+            <p></p>
+            <div class="methodology-section">
+              The distributed nature of computations along the two principal axes raises a key <em>puzzle</em>: there appears to be no clear boundary between some specialized processing streams. In fact, object and motion processing transition smoothly across cortical topography (left). Their distribution is also unimodal, both across the cortex and along the computational hierarchy (right).
+              These findings challenge the longstanding <em>two-visual-systems theory</em>, suggesting it may be a biased conceptual model. <em>Alternatively</em>, we propose that the brain is optimized for <strong>a unified objective</strong>, from which the topographical distribution of the two core computations—object form and motion—naturally emerges.
+              Informally, this looks like a <em>foundational world model</em> with topographical constraints.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h3 class="title is-4">Evidence from Models</h3>
+      </div>
+    </div>
+  
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <div class="text-center mt-5">
+              <img id="pipeline_framework" width="80%" src="images/demo-evidence-model.svg">
+            </div>
+            <!-- <p style="text-align:center; font-style: italic; font-size: small;">
+              Fedorenko, E., Ivanova, A.A. & Regev, T.I. The language network as a natural kind within the broader landscape of the human brain. Nat. Rev. Neurosci. 25, 289-312 (2024). 
+            </p> -->
+            <p></p>
+            <div class="methodology-section">
+              To complete our argument, we find that models trained on a single objective can achieve high alignment not only with all regions of the visual system, but also with human behavior and cognitive tasks. These objectives implicitly optimize for world understanding by encoding both object form and motion information.
+              Notably, some self-supervised model, such as V-JEPA and VideoMAE, also achieve state-of-the-art neural alignment, echoing principles from theoretical frameworks like predictive coding and world modeling.
+              Our finding suggests that such learning may suffice as <strong>a unified principle</strong> for learning in the brain. 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <p></p>
+            <div class="methodology-section">
+              Please check our full manuscript <a href="https://www.biorxiv.org/content/10.1101/2025.07.22.664908v1" target="_blank">here</a>,
+              where we talk about more interesting details:
+              <ul>
+                <li>How do we align the full hierarchy of a DNN to that of the brain? Do they match?</li>
+                <li>What does the actual neural prediction look like? How is the prediction accuracy distributed across the cortex?</li>
+                <li>How does the correlation between tasks and brain alignment look like?</li>
+                <li>We find new regions that underly the action understanding. What are they?</li>
+                <li>More details on how we think of the unified objective, <i>etc.</i></li>
+              </ul>
+              Again, thank you for your interest in our work! We hope you find it insightful.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  
+   <!-- Next Steps / Future Directions Section -->
+  <!-- <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Take aways</h2>
+      </div>
+    </div>
+  
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content has-text-justified">
+  
+            <div class="finding-box mb-4">
+              <span style="font-size: larger; text-align: center; font-weight: bold;">
+                Improving core visual abilities not only enhances overall performance but also increases adaptability. A stronger visual foundation maximizes the effectiveness of visual prompting and reduces reliance on prior knowledge, enabling models to operate more independently in vision-centric tasks.
+                <span class="arrow" style="color: #1194ec;">→</span>
+                <span class="conclusion" style="color: #f3540a;">Strengthening Fundamental Visual Capabilities.</span>
+              </span>
+            </div>
+            <div class="finding-box mb-4">
+              <span style="font-size: larger; text-align: center; font-weight: bold;">
+                Integrating language into vision-centric tasks requires careful calibration. Future research should establish clearer principles on when language-based reasoning aids visual understanding and when it introduces unnecessary biases, ensuring models leverage language appropriately.
+                <span class="arrow" style="color: #1194ec;">→</span>
+                <span class="conclusion" style="color: #f3540a;">Balancing Language-Based Reasoning in Vision-Centric Tasks.</span>
+              </span>
+            </div>
+            <div class="finding-box mb-4">
+              <span style="font-size: larger; text-align: center; font-weight: bold;">
+                Current training paradigms focus heavily on emphasizing vision-language associations. However, as models expand their visual context window, their ability to reason purely within the visual domain becomes increasingly crucial. We should prioritize developing models that can structure, organize, and infer relationships among visual cues.
+                <span class="arrow" style="color: #1194ec;">→</span>
+                <span class="conclusion" style="color: #f3540a;">Evolving Vision-Text Training Paradigms.</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <style>
+      .finding-box {
+        background-color: #f8f9fa;
+        border-radius: 20px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      }
+  
+      .finding-content {
+        margin: 0;
+      }
+  
+      .number {
+        font-weight: bold;
+        color: #2c3e50;
+      }
+  
+      .arrow {
+        color: #7f8c8d;
+        margin: 0 0.5rem;
+        font-weight: bold;
+      }
+  
+      .conclusion {
+        color: #2980b9;
+        font-weight: bold;
+      }
+  
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </section> -->
+
+  <!-- BibTeX Section -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{tang2025many,
+          title={Many-Two-One: Diverse Representations Across Visual Pathways Emerge from A Single Objective},
+          author={Tang, Yingtian and Gokce, Abdulkadir and Al-Karkari, Khaled Jedoui and Yamins, Daniel and Schrimpf, Martin},
+          journal={bioRxiv},
+          pages={2025--07},
+          year={2025},
+          publisher={Cold Spring Harbor Laboratory}
+        }
+      </code></pre>
+    </div>
+  </section>
+  
+  <!-- Acknowledgement Section -->
+
+  <!-- <div class="container is-max-desktop content">
+    <h2 class="title">Contact</h2>
+    <div style="font-size: large;">
+      Badr AlKhamissi: <span style="font-family: 'Courier New', Courier, monospace;">badr [dot] alkhamissi [at] epfl.ch</span>
+    </div> 
+    <div style="font-size: large;">
+      Martin Schrimpf: <span style="font-family: 'Courier New', Courier, monospace;">martin [dot] schrimpf [at] epfl.ch</span>
+    </div> 
+  </div> -->
+
+  <!-- Acknowledgement Section -->
+  <section class="section" id="Acknowledgement">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgement</h2>
+      <p>
+        This website is adapted from <a href="https://github.com/llava-vl/llava-vl.github.io">LLaVA-VL</a>, <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and <a href="https://vl-rewardbench.github.io/">VL-RewardBench</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=fcfaee&w=600&t=tt&d=pDvM8pP6xwKUSlGJXxBGXqLJYIzpP8FnSdVopMjEtSM&cmn=c96868&cmo=bfbba9&ct=ffffff'></script> -->
+
 </body>
 </html>
